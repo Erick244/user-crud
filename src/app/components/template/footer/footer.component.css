@@ -1,0 +1,14 @@
+.footer {
+	padding: 20px;
+	background-color: #ddd;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
+}
+
+.footer a {
+	color: #000;
+}
+
+.footer span {
+	color: rgb(99, 4, 177);
+	font-weight: bold;
+}

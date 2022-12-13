@@ -1,0 +1,8 @@
+<div class="message" [ngStyle]="{background: messageConfig.mainColor}" [hidden]="messageConfig.hidden">
+	<i class="fa-solid fa-xmark close" (click)="closeMessage()"></i>
+	<h1>{{messageConfig.title}} <i [class]="messageConfig.icon"></i></h1>
+	<p>{{messageConfig.msg}}</p>
+	<div class="containerProgress">
+		<div class="progress"></div>
+	</div>
+</div>

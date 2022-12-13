@@ -1,0 +1,34 @@
+.nav {
+	background-color: rgba(106, 6, 221, 0.356);
+	box-shadow: 0px 5px 4px rgba(0, 0, 0, 0.315);
+}
+
+.items {
+	display: flex;
+	justify-content: center;
+	list-style: none;
+}
+
+.item {
+	padding: 20px 0px;
+}
+
+.item a {
+	font-size: 1.1rem;
+	padding: 20px;
+	margin-left: 10px;
+	background-color: #6005c95b;
+	transition: all 150ms ease;
+}
+
+.item a:hover {
+	background-color: #6005c9b7;
+}
+
+.item a:active {
+	opacity: 80%;
+}
+
+.item a.current {
+	background-color: #6005c9b7;
+}

@@ -1,0 +1,27 @@
+.layout {
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 100px 0fr 1fr 0fr;
+	grid-template-areas: 
+	'header'
+	'nav'
+	'main'
+	'footer';
+}
+
+.header {
+	grid-area: header;
+}
+
+.nav {
+	grid-area: nav;
+}
+
+.main {
+	grid-area: main;
+}
+
+.footer {
+	grid-area: footer;
+}

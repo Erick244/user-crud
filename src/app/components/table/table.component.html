@@ -1,0 +1,29 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Nickname</th>
+			<th>Email</th>
+			<th>Photo</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr *ngFor="let user of users">
+			<td class="borderLeft">{{user.id}}</td>
+			<td class="borderLeft">{{user.nickname}}</td>
+			<td class="borderLeft">{{user.email}}</td>
+			<td class="borderLeft"><img src="{{user.imageUrl}}"></td>
+			<td>
+				<div class="actions">
+					<a routerLink="/edit/{{user.id}}" class="edit">
+						<i class="fa-solid fa-user-pen"></i>
+					</a>
+					<a routerLink="/delete/{{user.id}}" class="del">
+						<i class="fa-solid fa-user-minus"></i>
+					</a>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>

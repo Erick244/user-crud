@@ -1,0 +1,54 @@
+<div class="containerForm">
+	<h1 class="title">{{title}}</h1>
+	<hr>
+	<form (submit)="cancelSubmit($event)">
+		<div class="areaForm">
+			<label for="nickname">Nickname</label>
+			<input 
+				type="text" 
+				id="nickname" 
+				placeholder="Enter the nickname..."
+				[(ngModel)]="user.nickname"
+				name="nickname"
+				[disabled]="disable"
+			>
+		</div>
+		<div class="areaForm">
+			<label for="email">Email</label>
+			<input 
+				type="text" 
+				id="email" 
+				placeholder="Enter the email..."
+				[(ngModel)]="user.email"
+				name="email"
+				[disabled]="disable"
+			>
+		</div>
+		<div class="areaForm">
+			<label for="photo">Photo</label>
+			<div class="imagePreview" [hidden]="!user.imageUrl">
+				<img [src]="user.imageUrl">
+			</div>
+			<input 
+				type="url" 
+				id="photo"
+				placeholder="Enter the photo(URL)..."
+				[(ngModel)]="user.imageUrl"
+				name="photo"
+				[disabled]="disable"
+			>
+		</div>
+		<div class="containerButtons">
+			<button 
+				[ngStyle]="{ background: buttonColor }"
+				class="submitButton"
+				(click)="submitForm()"
+			>
+				{{buttonLabel}}
+			</button>
+			<button class="cancelButton" (click)="cancel()">
+				Cancel
+			</button>
+		</div>
+	</form>
+</div>
