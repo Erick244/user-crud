@@ -32,7 +32,7 @@ import { MessageComponent } from './components/view/message/message.component';
     CreateComponent,
     EditComponent,
     DeleteComponent,
-    MessageComponent
+    MessageComponent,
   ],
   imports: [
     BrowserModule,

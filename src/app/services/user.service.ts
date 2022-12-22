@@ -8,6 +8,7 @@ import User from "../models/User.model";
 })
 export class UserService {
 	baseUrl = "http://localhost:3001/users";
+	totalData!: number;
 
 	constructor(private http: HttpClient) {
 		this.http = http;

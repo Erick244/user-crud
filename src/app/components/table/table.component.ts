@@ -1,5 +1,4 @@
-import { UserService } from './../../services/user.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import User from 'src/app/models/User.model';
 
 @Component({
@@ -7,15 +6,15 @@ import User from 'src/app/models/User.model';
 	templateUrl: './table.component.html',
 	styleUrls: ['./table.component.css']
 })
-export class TableComponent implements OnInit {
-	users!: User[];
+export class TableComponent implements OnInit {	
 
-	constructor(private userService: UserService) {}
+	@Input() users!: User[];
+
+
+	constructor() { }
 
 	ngOnInit(): void {
-		this.userService.get().subscribe(data => {
-			this.users = data;
-		})
 	}
 
+	
 }

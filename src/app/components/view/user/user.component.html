@@ -1,8 +1,36 @@
 <div class="users">
-	<button (click)="renderAddForm()">
-		Add User <i class="fa-solid fa-user-plus"></i>
-	</button>
+	<div class="functions">
+		<div class="containerButtons">
+			<button (click)="renderAddForm()" class="addUser">
+				Add User <i class="fa-solid fa-user-plus"></i>
+			</button>
+			<div class="totalUsers">
+				<i class="fa-solid fa-users"></i>Users: {{totalUsers}}
+			</div>
+		</div>
+		<div class="containerSearch">
+			<select (change)="getOption($event)">
+				<option value="">Search Option</option>
+				<option value="id">ID</option>
+				<option value="nickname">Nickname</option>
+				<option value="email">Email</option>
+			</select>
+			<div class="search">
+				<input [type]="searchOption" placeholder="Search for users..." [disabled]="!searchOption"
+					[(ngModel)]="textSeach" (keypress)="$event.key == 'Enter' ? filterUsersBySearch() : null">
+				<button [disabled]="!searchOption" (click)="filterUsersBySearch()">
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</div>
+		</div>
+	</div>
 	<div class="containerTable">
-		<app-table></app-table>
+		<app-table [users]="pagedUsers"></app-table>
+		<button 
+			(click)="showMore()"
+			*ngIf="thereUsersAfterLimit() && totalUsers > 10"
+		>
+			Show more <i class="fa-solid fa-chevron-down"></i>
+		</button>
 	</div>
 </div>

@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 10px;
 	right: 50px;
-	padding: 10px 15px;
+	padding: 20px;
 	border-radius: 10px;
 	color: #fff;
 	text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.384);
@@ -13,12 +13,17 @@
 .message .close {
 	position: absolute;
 	cursor: pointer;
-	right: 10px;
+	right: 5px;
+	top: 5px;
 	font-size: 1.3rem;
 }
 
-.message > h1 i {
+.message > h1 {
 	font-size: 1.5rem;
+}
+
+.message > h1 i {
+	font-size: 1.3rem;
 }
 
 .message .containerProgress {

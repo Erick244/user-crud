@@ -1,19 +1,19 @@
 <table class="table">
 	<thead>
 		<tr>
-			<th>ID</th>
-			<th>Nickname</th>
-			<th>Email</th>
-			<th>Photo</th>
+			<th class="borderRight">ID</th>
+			<th class="borderRight">Nickname</th>
+			<th class="borderRight">Email</th>
+			<th class="borderRight">Photo</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
 		<tr *ngFor="let user of users">
-			<td class="borderLeft">{{user.id}}</td>
-			<td class="borderLeft">{{user.nickname}}</td>
-			<td class="borderLeft">{{user.email}}</td>
-			<td class="borderLeft"><img src="{{user.imageUrl}}"></td>
+			<td class="borderRight">{{user.id}}</td>
+			<td class="borderRight">{{user.nickname}}</td>
+			<td class="borderRight">{{user.email}}</td>
+			<td class="borderRight"><img src="{{user.imageUrl}}"></td>
 			<td>
 				<div class="actions">
 					<a routerLink="/edit/{{user.id}}" class="edit">
@@ -27,3 +27,4 @@
 		</tr>
 	</tbody>
 </table>
+

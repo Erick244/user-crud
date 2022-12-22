@@ -5,7 +5,14 @@
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.301);
 }
 
-.users > button {
+.functions {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.containerButtons .addUser {
 	padding: 15px 20px;
 	border-radius: 15px;
 	font-size: 1rem;
@@ -16,14 +23,108 @@
 	color: #fff;
 }
 
-.users > button:active {
+.containerButtons .addUser:active {
+	opacity: 80%;
+}
+
+.containerButtons .totalUsers {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 20px;
+	color: #fff;
+	margin-top: 20px;
+	border-radius: 10px;
+	background-color: rgb(250, 102, 102);
+}
+
+.containerButtons .totalUsers > i {
+	margin: 0px 3px;
+}
+
+.containerSearch {
+	display: flex;
+	flex-direction: column;
+}
+
+.containerSearch > select {
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 1rem;
+	border-color: #6102AE;
+	outline: none;
+}
+
+.search {
+	display: flex;
+	margin-top: 20px;
+}
+
+.search > input {
+	width: 200px;
+	padding: 5px;
+	border: 2px solid #6102AE;
+	border-right: none;
+	background-color: #6102ae09;
+	font-size: 1rem;
+	border-radius: 7px 0 0 7px;
+	outline: none;
+	transition: all 200ms ease;
+}
+
+.search > input:disabled {
+	border-color: #444;
+} 
+
+.search > input:focus {
+	width: 220px;
+	background-color: #fff;
+}
+
+.search > button {
+	padding: 5px;
+	font-size: 1rem;
+	border: 2px solid #6102AE;
+	border-radius: 0 7px 7px 0;
+	background-color: #6102AE;
+	color: #fff;
+	cursor: pointer;
+}
+
+.search > button:disabled {
+	border-color: #444;
+	background-color: #444;
+} 
+
+.search > button:active {
 	opacity: 80%;
 }
 
 .containerTable {
 	width: 100%;
-	margin: 50px auto;
-	padding: 20px 0px 20px 0px;
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto;
+	padding: 10px 0px 20px 0px;
 	border-radius: 5px;
+	background-color: #6204C3;
 	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.199);
 }
+
+.containerTable > button {
+	align-self: center;
+	margin-top: 20px;
+	padding: 10px 15px;
+	background-color: transparent;
+	color: #ffffff;
+	font-weight: 500;
+	border: 1px solid #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 100ms ease;
+}
+
+.containerTable > button:hover {
+	background-color: #ffffff34;
+}
+
