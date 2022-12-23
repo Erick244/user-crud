@@ -51,7 +51,7 @@ export class UserComponent implements OnInit {
 			}
 
 			this.totalUsers = this.usersFiltered.length;
-			
+
 			if (!this.totalUsers) {
 				this.message.config.msg = "User not found.";
 				this.message.config.title = "Problem";
@@ -60,6 +60,7 @@ export class UserComponent implements OnInit {
 				this.message.showMessage();
 
 				this.usersFiltered = users;
+				this.totalUsers = this.usersFiltered.length;
 			}
 
 			this.pagedUsers = [];
